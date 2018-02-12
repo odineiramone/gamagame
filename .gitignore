@@ -1,3 +1,5 @@
 .tool-versions
 /log/development.log
 /tmp
+.env.*
+!.env.sample

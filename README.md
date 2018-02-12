@@ -15,3 +15,8 @@ Have you ever played Gama Game? It's a game of general knowledge questions and a
   - Run `bundle exec rails db:setup` to create and populate database
   - Start rails server with `rails s` on console
   - Access `localhost:3000` on browser and ENJOY!
+
+### To execute tests
+  - Rename `.env.sample` to `.env.test` and fill the options with your database information
+  - Run `RAILS_ENV=test bundle exec rails db:setup` to create and populate test database
+  - Run `bundle exec rspec` to execute tests

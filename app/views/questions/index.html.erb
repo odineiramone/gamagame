@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-12">
+    <div class="main">
+      <div class="question">
+          <div class="title">
+            <div class="row">
+              <div class="question col-8">
+                <p><%= @question.title %></p>
+              </div>
+              <div class="category col-4">
+                <span class="category_title"><%= @question.category %></span>
+              </div>
+            </div>
+          </div>
+          <div class="options">
+            <div class="row">
+              <%= form_for :answer, url: answer_questions_path do |f| %>
+                <div class="col-1"></div>
+                <div class="col-10">
+                  <ul>
+                    <% @question.options.each_with_index do |opt, i| %>
+                    <li>
+                      <%= f.radio_button :option, i + 1 %>
+                      <%= label :option, opt %>
+                    </li>
+                    <% end %>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="col-8"></div>
+                  <div class="col-4">
+                    <%= f.submit 'Next', class: [:send_answer, :disabled], disabled: '' %>
+                    <%= f.text_field :correct, value: @question.answer, type: :hidden %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

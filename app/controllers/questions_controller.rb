@@ -1,7 +1,7 @@
 class QuestionsController < ApplicationController
   def index
     gs = current_game
-    redirect_to score_questions_path if gs.answers >= 10
+    redirect_to score_questions_path if gs.answers >= Rails.application.secrets.max_questions
     @question = Question.random_question
   end
 

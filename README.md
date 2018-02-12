@@ -1,24 +1,17 @@
-# README
+# Gama Game
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Have you ever played Gama Game? It's a game of general knowledge questions and answers. It used to be played at #gamagame, an IRC (Internet Relay Chat) channel in the Brasnet network, which no longer exists
 
-Things you may want to cover:
+## Made with
 
-* Ruby version
+  - Ruby 2.5.0
+  - Rails 5.1.4
+  - Postgres :elephant:
 
-* System dependencies
+## Setup
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  - Run `bundle install` on terminal console
+  - Rename `.env.sample` to `.env.development` and fill the options with your database information
+  - Run `bundle exec rails db:setup` to create and populate database
+  - Start rails server with `rails s` on console
+  - Access `localhost:3000` on browser and ENJOY!

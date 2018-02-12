@@ -1,2 +1,0 @@
-  [1m[36mQuestion Load (1.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" LIMIT ?[0m  [["LIMIT", 11]]
-  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" LIMIT ?[0m  [["LIMIT", 11]]
